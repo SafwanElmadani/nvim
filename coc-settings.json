@@ -1,5 +1,6 @@
 {
-"languageserver": {
+ "coc.preferences.jumpCommand": "tabe",
+  "languageserver": {
   "ccls": {
     "command": "ccls",
     "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
