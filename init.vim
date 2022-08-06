@@ -16,7 +16,6 @@ set termguicolors
 
 "Nerdtree keys
 nnoremap <C-t> :NERDTreeToggle<CR> 
-nnoremap <C-f> :NERDTreeFind<CR>
 
 let g:python3_host_prog= '~/virenv/base3.8/bin/python'
 
@@ -26,3 +25,10 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
+nnoremap <Leader>f :Files <CR>
+nnoremap <Leader>r :Ag <CR>
+nnoremap <Leader>w :BLines <CR>
+
+
+nnoremap <C-S> :update <CR>
+inoremap <C-S> <Esc> :update <CR>i
