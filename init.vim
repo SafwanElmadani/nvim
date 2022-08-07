@@ -41,12 +41,12 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-nnoremap <Leader>f :Files <CR>
-nnoremap <Leader>r :Ag <CR>
+nnoremap <Leader>ff :Files <CR>
+nnoremap <Leader>rr :Ag <CR>
 nnoremap <Leader>w :BLines <CR>
 
 
-nnoremap <C-S> :update <CR>
+" nnoremap <C-S> :update <CR>
 inoremap <C-S> <Esc> :update <CR>i
 
 " ccls lsp https://github.com/neoclide/coc.nvim#example-vim-configuration
