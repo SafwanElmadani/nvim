@@ -6,8 +6,12 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 
+"file and directory search
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+"language servers
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
