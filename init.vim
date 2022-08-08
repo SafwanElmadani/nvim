@@ -33,9 +33,10 @@ let g:airline_theme= 'simple'
 "Nerdtree keys
 nnoremap <C-t> :NERDTreeToggle<CR> 
 
-let g:python3_host_prog= '~/virenv/base3.8/bin/python'
+let g:python3_host_prog='~/virenv/base3.8/bin/python'
 
 " This is the default extra key bindings
+let g:fzf_buffers_jump = 1
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
@@ -44,6 +45,13 @@ let g:fzf_action = {
 nnoremap <Leader>ff :Files <CR>
 nnoremap <Leader>rr :Ag <CR>
 nnoremap <Leader>w :BLines <CR>
+
+
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 
 " nnoremap <C-S> :update <CR>
