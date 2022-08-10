@@ -29,7 +29,20 @@ set background=dark    " Setting dark mode
 
 set termguicolors
 
+" airline statusline config
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+" dont show buffer in tab after closing
+let g:airline#extensions#tabline#show_buffers = 0
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+
+" theme
 let g:airline_theme= 'simple'
+" always show tabs
+set showtabline=2
+"end airline config
+
 "Nerdtree keys
 nnoremap <C-t> :NERDTreeToggle<CR> 
 
