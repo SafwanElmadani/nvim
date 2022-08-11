@@ -47,9 +47,13 @@ set showtabline=2
 "Nerdtree keys
 " enable line numbers
 let NERDTreeShowLineNumbers=1
+" open file in a new tab https://github.com/preservim/nerdtree/issues/1058
+let g:NERDTreeCustomOpenArgs = {'file':{'where':'t'}}
+"let NERDTreeMapOpenInTab='<ENTER>'
 " make sure relative line numbers are used
 "autocmd FileType nerdtree setlocal relativenumber
-nnoremap <C-t> :NERDTreeToggle<CR> 
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 
 let g:python3_host_prog='~/virenv/base3.8/bin/python'
 
