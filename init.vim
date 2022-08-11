@@ -45,6 +45,10 @@ set showtabline=2
 "end airline config
 
 "Nerdtree keys
+" enable line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+"autocmd FileType nerdtree setlocal relativenumber
 nnoremap <C-t> :NERDTreeToggle<CR> 
 
 let g:python3_host_prog='~/virenv/base3.8/bin/python'
