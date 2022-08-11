@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline-themes'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
+let g:gruvbox_contrast_dark = 'hard'
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark    " Setting dark mode
 
