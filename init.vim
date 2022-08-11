@@ -67,6 +67,15 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" split resize
+" right
+nnoremap <A-l> :vertical resize +5<CR>
+" Left
+nnoremap <A-h> :vertical resize -5<CR>
+" up
+nnoremap <A-k> :resize -5<CR>
+" down
+nnoremap <A-j> :resize +5<CR>
 
 " nnoremap <C-S> :update <CR>
 inoremap <C-S> <Esc> :update <CR>i
