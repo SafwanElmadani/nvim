@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# USAGE:
+# nvim_pop [path]
+
+nvim_pop() {
+  local target="${PWD}"
+  if [ -n "${1}" ]; then
+    target=$(realpath "$1")
+#    echo $target
+  fi
+
+  local wdir=$(dirname "${target}")
+#	echo $wdir
+  nohup alacritty --config-file ~/.config/alacritty/alacritty.yml \
+    --working-directory "${wdir}" \
+    -t "nvim - ${target}" \
+    -e $SHELL -lc "nvim ${target}" >/dev/null 2>&1 &
+}
