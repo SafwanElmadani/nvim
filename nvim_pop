@@ -4,16 +4,25 @@
 # nvim_pop [path]
 
 nvim_pop() {
-  local target="${PWD}"
-  if [ -n "${1}" ]; then
-    target=$(realpath "$1")
-#    echo $target
-  fi
+  if [ "$#" = "2" ];then
+	local args="$1"
+        local target="${PWD}"
+         if [ -n "${2}" ]; then
+         target=$(realpath "$2")
+         #    echo $target
+         fi
+  else
+  	local target="${PWD}"
+  	if [ -n "${1}" ]; then
+    	target=$(realpath "$1")
+	#    echo $target
+        fi
+   fi
 
   local wdir=$(dirname "${target}")
 #	echo $wdir
   nohup alacritty --config-file ~/.config/alacritty/alacritty.yml \
     --working-directory "${wdir}" \
     -t "nvim - ${target}" \
-    -e $SHELL -lc "nvim ${target}" >/dev/null 2>&1 &
+    -e $SHELL -lc "nvim ${args} ${target}" >/dev/null 2>&1 &
 }
