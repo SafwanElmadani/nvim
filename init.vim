@@ -21,6 +21,9 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"git integrations
+Plug 'airblade/vim-gitgutter'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
