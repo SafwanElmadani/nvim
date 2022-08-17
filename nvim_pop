@@ -18,8 +18,11 @@ nvim_pop() {
 	#    echo $target
         fi
    fi
-
-  local wdir=$(dirname "${target}")
+  if [ -d "${target}" ];then
+	local wdir="${target}"
+  else
+  	local wdir=$(dirname "${target}")
+  fi
 #	echo $wdir
   nohup alacritty --config-file ~/.config/alacritty/alacritty.yml \
     --working-directory "${wdir}" \
