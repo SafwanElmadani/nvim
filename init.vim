@@ -21,8 +21,15 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"nvim lsp client
+Plug 'neovim/nvim-lspconfig'
+
 "git integrations
 Plug 'airblade/vim-gitgutter'
+
+"solidity stuff
+Plug 'TovarishFin/vim-solidity'
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
