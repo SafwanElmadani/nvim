@@ -98,6 +98,8 @@ nnoremap <A-j> :resize +5<CR>
 " nnoremap <C-S> :update <CR>
 inoremap <C-S> <Esc> :update <CR>i
 
+nnoremap <Leader>t :set nonumber \| set signcolumn=no<CR>
+nnoremap <Leader>tt :set number \| set signcolumn=yes:1<CR>
 " ccls lsp https://github.com/neoclide/coc.nvim#example-vim-configuration
 " Some servers have issues with backup files, see #649.
 set nobackup
