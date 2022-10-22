@@ -1,4 +1,15 @@
 set number
+" disable mouse clicks
+set mouse=
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting with '>', use 4 spaces width
+set shiftwidth=4
+" On pressing tab, insert 4 spaces
+set expandtab
+
+let g:indent_guides_indent_levels = 30
+let g:indent_guides_guide_size = 1
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -30,6 +41,7 @@ Plug 'airblade/vim-gitgutter'
 "solidity stuff
 Plug 'TovarishFin/vim-solidity'
 
+Plug 'nathanaelkane/vim-indent-guides'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
