@@ -1,4 +1,3 @@
-
 source $HOME/.config/nvim/config/keys.vim
 
 call plug#begin('~/.config/nvim/plugged')
@@ -32,6 +31,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'TovarishFin/vim-solidity'
 
 Plug 'nathanaelkane/vim-indent-guides'
+
+Plug 'jpalardy/vim-slime'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -227,6 +228,10 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Documentation on hover
+inoremap <silent> ,s <C-r>=CocActionAsync('showSignatureHelp')<CR>
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 "ccls done
 
 "Neovim/Vim True Color support https://github.com/morhetz/gruvbox/wiki/Terminal-specific

@@ -1,4 +1,5 @@
-set number
+set guicursor=
+set number relativenumber
 " disable mouse clicks
 set mouse=
 " show existing tab with 4 spaces width
@@ -38,6 +39,8 @@ nnoremap <Leader>t :set nonumber \| set signcolumn=no<CR>
 nnoremap <Leader>tt :set number \| set signcolumn=yes:1<CR>
 
 "insert newline under
-nmap oo o<Esc>k 
+"nmap oo o<Esc>k 
 "insert newline above
-nmap OO O<Esc>j
+"nmap OO O<Esc>j
+
+let g:slime_target = "kitty"
