@@ -1,5 +1,10 @@
 set guicursor=
 set number relativenumber
+"foldsettings
+set foldmethod=syntax
+"needs to be set to a large number
+set foldlevelstart=20
+set nofoldenable
 " disable mouse clicks
 set mouse=
 " show existing tab with 4 spaces width
