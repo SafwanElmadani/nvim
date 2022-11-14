@@ -40,7 +40,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 lua require('init')
-
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
+set nofoldenable                     " Disable folding at startup.
 
 let g:gruvbox_contrast_dark = 'hard'
 autocmd vimenter * ++nested colorscheme gruvbox
