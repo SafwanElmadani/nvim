@@ -12,4 +12,4 @@ Use: `:PlugInstall` to install the plugins after they are added to `~/.config/n
 Read more in the notes.
 
 ### vim
- you will need to run `ln -s `realpath .vimrc` ~/.vimrc` `~/.config/nvim`
+ you will need to run `ln -s \`realpath .vimrc\` ~/.vimrc` `~/.config/nvim`
