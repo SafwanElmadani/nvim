@@ -16,10 +16,11 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "theme
 Plug 'morhetz/gruvbox'
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "statusline and tab
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 
 "nvim lsp client
 Plug 'neovim/nvim-lspconfig'
@@ -44,6 +45,7 @@ call plug#end()
 let g:gruvbox_contrast_dark = 'hard'
 autocmd vimenter * ++nested colorscheme gruvbox
 set background=dark    " Setting dark mode
+"colorscheme tokyonight-storm
 
 set termguicolors
 
@@ -53,10 +55,12 @@ let g:airline#extensions#tabline#enabled = 1
 " dont show buffer in tab after closing
 let g:airline#extensions#tabline#show_buffers = 0
 " enable powerline fonts
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " theme
-let g:airline_theme= 'simple'
+let g:airline_theme= 'dark'
 " always show tabs
 set showtabline=2
 "end airline config
