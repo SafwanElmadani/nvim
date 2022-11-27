@@ -35,6 +35,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'jpalardy/vim-slime'
 
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
+
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " List ends here. Plugins become visible to Vim after this call.

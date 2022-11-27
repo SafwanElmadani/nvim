@@ -14,6 +14,10 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+set nocompatible
+filetype plugin on
+syntax on
+
 let g:indent_guides_indent_levels = 30
 let g:indent_guides_guide_size = 1
 
