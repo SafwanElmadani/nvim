@@ -1,25 +1,3 @@
-set guicursor=
-set number relativenumber
-"foldsettings
-set foldmethod=syntax
-"needs to be set to a large number
-set foldlevelstart=20
-set nofoldenable
-" disable mouse clicks
-set mouse=
-" show existing tab with 4 spaces width
-set tabstop=4
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
-
-set nocompatible
-filetype plugin on
-syntax on
-
-let g:indent_guides_indent_levels = 30
-let g:indent_guides_guide_size = 1
 
 nnoremap <Leader>ff :Files <CR>
 nnoremap <Leader>rr :Ag <CR>
@@ -52,4 +30,3 @@ nnoremap <Leader>tt :set number relativenumber \| set signcolumn=yes:1<CR>
 "insert newline above
 "nmap OO O<Esc>j
 
-let g:slime_target = "kitty"
