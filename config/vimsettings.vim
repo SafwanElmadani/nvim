@@ -1,4 +1,4 @@
-
+set paste
 set guicursor=
 set number relativenumber
 "foldsettings
@@ -7,7 +7,7 @@ set foldmethod=syntax
 set foldlevelstart=20
 set nofoldenable
 " disable mouse clicks
-set mouse=
+set mouse=a
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
