@@ -29,5 +29,4 @@ let &t_EI = "\e[1 q"
 " not contain bce. This causes incorrect background rendering when
 " using a color theme with a background color.
 let &t_ut=''
-
-
+syntax on
