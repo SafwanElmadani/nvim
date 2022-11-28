@@ -16,6 +16,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "theme
 Plug 'morhetz/gruvbox'
+"Plug 'joshdick/onedark.vim'
+"Plug 'sainnhe/gruvbox-material'
+Plug 'sheerun/vim-polyglot'
 "Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "statusline and tab
