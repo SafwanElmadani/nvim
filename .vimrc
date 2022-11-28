@@ -22,8 +22,8 @@ try
 catch
 endtry
 " Change the cursor in different modes
-let &t_SI = "\e[5 q"
-let &t_SR = "\e[3 q"
+let &t_SI = "\e[1 q"
+let &t_SR = "\e[1 q"
 let &t_EI = "\e[1 q"
 " vim hardcodes background color erase even if the terminfo file does
 " not contain bce. This causes incorrect background rendering when
