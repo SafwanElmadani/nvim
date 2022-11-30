@@ -15,6 +15,22 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+
+call plug#begin()
+
+"file and directory search
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+
+"statusline and tab
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'sheerun/vim-polyglot'
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+
 try
     " undercurl support
     let &t_Cs = "\e[4:3m"
