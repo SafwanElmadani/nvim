@@ -1,6 +1,7 @@
 set paste
 set guicursor=
 set number relativenumber
+set hlsearch
 "foldsettings
 set foldmethod=syntax
 "needs to be set to a large number
