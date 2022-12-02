@@ -41,7 +41,7 @@ Plug 'jpalardy/vim-slime'
 "For markdown
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -53,7 +53,7 @@ call plug#end()
 
 source $HOME/.config/nvim/config/vimslime.vim
 source $HOME/.config/nvim/config/vim-indent.vim
-source $HOME/.config/nvim/config/snips.vim
+"source $HOME/.config/nvim/config/snips.vim
 source $HOME/.config/nvim/config/gruvbox.vim
 
 source $HOME/.config/nvim/config/airline.vim

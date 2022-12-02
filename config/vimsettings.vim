@@ -1,4 +1,3 @@
-set paste
 set guicursor=
 set number relativenumber
 "foldsettings
