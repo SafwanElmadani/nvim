@@ -1,5 +1,4 @@
 set paste
-set guicursor=
 set number relativenumber
 set hlsearch
 "foldsettings
@@ -47,3 +46,7 @@ let &t_EI = "\e[1 q"
 " using a color theme with a background color.
 let &t_ut=''
 syntax on
+
+nnoremap <Leader>cc :set cursorline! \| set cursorcolumn!<CR>
+hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE
+hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE

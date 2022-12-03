@@ -1,4 +1,5 @@
 set guicursor=
+"set cursorline cursorcolumn 
 set number relativenumber
 "foldsettings
 set foldmethod=syntax
