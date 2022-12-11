@@ -33,4 +33,5 @@ hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
 "nmap oo o<Esc>k 
 "insert newline above
 "nmap OO O<Esc>j
-
+nmap m nzz
+nmap M Nzz
