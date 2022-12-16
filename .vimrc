@@ -48,6 +48,8 @@ let &t_ut=''
 syntax on
 
 nnoremap <Leader>cc :set cursorline! \| set cursorcolumn!<CR>
+set cursorline!
+set cursorcolumn!
 hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE
 hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
 nmap m nzz
