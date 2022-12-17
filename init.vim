@@ -65,3 +65,4 @@ source $HOME/.config/nvim/config/fzfconf.vim
 let g:python3_host_prog='~/virenv/base3.8/bin/python'
 
 source $HOME/.config/nvim/config/cocconf.vim
+source $HOME/.config/nvim/config/polyglot.vim
