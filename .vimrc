@@ -54,3 +54,7 @@ hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE
 hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
 nmap m nzz
 nmap M Nzz
+
+if &term == "alacritty"
+    set term=xterm-256color
+endif
