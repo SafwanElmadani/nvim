@@ -28,6 +28,8 @@ nnoremap <Leader>tt :set number relativenumber \| set signcolumn=yes:1<CR>
 nnoremap <Leader>cc :set cursorline! \| set cursorcolumn!<CR>
 hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE
 hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE
+set cursorline!
+set cursorcolumn!
 
 "insert newline under
 "nmap oo o<Esc>k 
