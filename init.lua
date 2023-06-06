@@ -41,7 +41,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 Plug 'jpalardy/vim-slime'
 
+-- eww plugins
 Plug 'elkowar/yuck.vim'
+Plug 'gpanders/nvim-parinfer'
 
 -- For markdown
 Plug 'godlygeek/tabular'
