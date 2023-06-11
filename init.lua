@@ -48,6 +48,7 @@ Plug 'preservim/vim-markdown'
 Plug 'honza/vim-snippets'
 
 -- Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug('nvim-treesitter/nvim-treesitter', {['do'] = vim.fn[':TSUpdate']})
 --  List ends here. Plugins become visible to Vim after this call.
 vim.call('plug#end')
 
@@ -69,3 +70,5 @@ source $HOME/.config/nvim/config/cocconf.vim
 source $HOME/.config/nvim/config/polyglot.vim
 source $HOME/.config/nvim/config/vimsettings.vim
 ]]
+
+require("vim-treesittings") -- lua/vimsettings.lua
