@@ -1,7 +1,6 @@
 vim.cmd 'source $HOME/.config/nvim/config/keys.vim'
 -- vim.cmd 'source $HOME/.config/nvim/config/vimsettings.vim'
 require("vimsettings") -- lua/vimsettings.lua
-
 -- pluging manager
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.config/nvim/plugged')
@@ -51,10 +50,13 @@ Plug 'preservim/vim-markdown'
 -- Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+-- Plug 'nvim-tree/nvim-web-devicons'
+-- Plug 'akinsho/bufferline.nvim'
 -- Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 --  List ends here. Plugins become visible to Vim after this call.
 vim.call('plug#end')
 
+-- require("bufferlineconfig")
 vim.cmd [[
 source $HOME/.config/nvim/config/vimslime.vim
 source $HOME/.config/nvim/config/vim-indent.vim
