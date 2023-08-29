@@ -1,11 +1,12 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- foldsettings
-vim.opt.foldmethod = 'syntax'
--- needs to be set to a large number
-vim.opt.foldlevelstart = 20
-vim.opt.foldenable = false
+-- This was affecting the performace
+-- -- foldsettings
+-- vim.opt.foldmethod = 'syntax'
+-- -- needs to be set to a large number
+-- vim.opt.foldlevelstart = 20
+-- vim.opt.foldenable = false
 
 -- mouse settings
 vim.opt.mouse = 'a'
