@@ -32,12 +32,6 @@ M.setup = function()
   vim.api.nvim_set_keymap('n', '<Leader>tt', ':set number relativenumber | set signcolumn=yes:1<CR>', map_opts)
   vim.api.nvim_set_keymap('n', '<Leader>cc', ':set cursorline! | set cursorcolumn!<CR>', map_opts)
 
-  -- Vim commands
-  vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
-  vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
-  vim.cmd('set cursorline!')
-  vim.cmd('set cursorcolumn!')
-
   -- more nmap mappings
   vim.api.nvim_set_keymap('n', 'm', 'nzz', silent_opts)
   vim.api.nvim_set_keymap('n', 'M', 'Nzz', silent_opts)

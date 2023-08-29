@@ -21,3 +21,9 @@ vim.opt.expandtab = true
 vim.opt.background = 'dark'    -- Setting dark mode
 -- colorscheme tokyonight-storm
 vim.opt.termguicolors = true
+
+-- Vim commands
+vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
+vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
+vim.cmd('set cursorline!')
+vim.cmd('set cursorcolumn!')
