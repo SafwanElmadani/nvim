@@ -1,7 +1,7 @@
 vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
 
-vim.cmd 'source $HOME/.config/nvim/config/keys.vim'
-require("vimsettings") -- lua/vimsettings.lua
+require("mappings").setup()
+require("mynvimsettings") -- lua/mynvimsettings.lua
 
 -- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
