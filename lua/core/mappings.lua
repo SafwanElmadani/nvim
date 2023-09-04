@@ -4,37 +4,36 @@ local M = {}
 
 M.setup = function()
 
-  local map_opts = { noremap = true, silent = false }
-
   -- nnoremap mappings
-  vim.api.nvim_set_keymap('n', '<Leader>ff', ':Files<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<Leader>rr', ':Ag<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<Leader>w', ':BLines<CR>', map_opts)
+  vim.keymap.set('n', '<Leader>ff', ':Files<CR>', {silent = true})
+  vim.keymap.set('n', '<Leader>rr', ':Ag<CR>', {silent = true})
+  vim.keymap.set('n', '<Leader>w', ':BLines<CR>', {silent = true})
 
   -- nmap mappings with silent
-  local silent_opts = { noremap = true, silent = true }
-  vim.api.nvim_set_keymap('n', '<c-k>', ':wincmd k<CR>', silent_opts)
-  vim.api.nvim_set_keymap('n', '<c-j>', ':wincmd j<CR>', silent_opts)
-  vim.api.nvim_set_keymap('n', '<c-h>', ':wincmd h<CR>', silent_opts)
-  vim.api.nvim_set_keymap('n', '<c-l>', ':wincmd l<CR>', silent_opts)
+  vim.keymap.set('n', '<c-k>', ':wincmd k<CR>', {silent = true})
+  vim.keymap.set('n', '<c-j>', ':wincmd j<CR>', {silent = true})
+  vim.keymap.set('n', '<c-h>', ':wincmd h<CR>', {silent = true})
+  vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', {silent = true})
 
   -- split resize mappings
-  vim.api.nvim_set_keymap('n', '<A-l>', ':vertical resize +5<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<A-h>', ':vertical resize -5<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<A-k>', ':resize -5<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<A-j>', ':resize +5<CR>', map_opts)
+  vim.keymap.set('n', '<A-l>', ':vertical resize +5<CR>', {silent = true})
+  vim.keymap.set('n', '<A-h>', ':vertical resize -5<CR>', {silent = true})
+  vim.keymap.set('n', '<A-k>', ':resize -5<CR>', {silent = true})
+  vim.keymap.set('n', '<A-j>', ':resize +5<CR>', {silent = true})
 
   -- inoremap mappings
-  vim.api.nvim_set_keymap('i', '<C-S>', '<Esc>:update<CR>i', map_opts)
+  vim.keymap.set('i', '<C-S>', '<Esc>:update<CR>i', {silent = true})
 
   -- other nnoremap mappings
-  vim.api.nvim_set_keymap('n', '<Leader>t', ':set nonumber norelativenumber | set signcolumn=no<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<Leader>tt', ':set number relativenumber | set signcolumn=yes:1<CR>', map_opts)
-  vim.api.nvim_set_keymap('n', '<Leader>cc', ':set cursorline! | set cursorcolumn!<CR>', map_opts)
+  vim.keymap.set('n', '<Leader>t', ':set nonumber norelativenumber | set signcolumn=no<CR>', {silent = true})
+  vim.keymap.set('n', '<Leader>tt', ':set number relativenumber | set signcolumn=yes:1<CR>', {silent = true})
+  vim.keymap.set('n', '<Leader>cc', ':set cursorline! | set cursorcolumn!<CR>', {silent = true})
 
   -- more nmap mappings
-  vim.api.nvim_set_keymap('n', 'm', 'nzz', silent_opts)
-  vim.api.nvim_set_keymap('n', 'M', 'Nzz', silent_opts)
+  vim.keymap.set('n', 'm', 'nzz', {silent = true})
+  -- vim.keymap.set('n', 'M', 'Nzz', {silent = true})
+  vim.keymap.set('n', 'M', 'Nzz', {silent = true})
+
 
 end
 
