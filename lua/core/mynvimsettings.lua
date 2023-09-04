@@ -1,6 +1,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- change cursor shape to block in insert mode
+vim.opt.guicursor = ""
+
 -- This was affecting the performace
 -- -- foldsettings
 -- vim.opt.foldmethod = 'syntax'
