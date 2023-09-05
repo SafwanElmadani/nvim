@@ -4,11 +4,6 @@ local M = {}
 
 M.setup = function()
 
-  -- nnoremap mappings
-  vim.keymap.set('n', '<Leader>ff', '<cmd>Files<CR>', {silent = true})
-  vim.keymap.set('n', '<Leader>rr', '<cmd>Ag<CR>', {silent = true})
-  vim.keymap.set('n', '<Leader>w', '<cmd>BLines<CR>', {silent = true})
-
   vim.keymap.set('n', '<c-k>', '<cmd>wincmd k<CR>', {silent = true})
   vim.keymap.set('n', '<c-j>', '<cmd>wincmd j<CR>', {silent = true})
   vim.keymap.set('n', '<c-h>', '<cmd>wincmd h<CR>', {silent = true})
