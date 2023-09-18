@@ -1,14 +1,15 @@
 {
   "bufferline.nvim": { "branch": "main", "commit": "d24378edc14a675c820a303b4512af3bbc5761e9" },
-  "catppuccin": { "branch": "main", "commit": "a937d546f4783a1ff67f84043d2d7871ad4ecd83" },
-  "gitsigns.nvim": { "branch": "main", "commit": "fef5d90953f0a730483b44745fae5938ba8227f8" },
+  "catppuccin": { "branch": "main", "commit": "85e93601e0f0b48aa2c6bbfae4d0e9d7a1898280" },
+  "gitsigns.nvim": { "branch": "main", "commit": "bce4576a9047085a528c479a7fe1e2f6b787b6c1" },
   "gruvbox.nvim": { "branch": "main", "commit": "7fb36e0f67aa6f3d7f3e54f37ca7032ea1af0b59" },
+  "hex.nvim": { "branch": "master", "commit": "dc51e5d67fc994380b7c7a518b6b625cde4b3062" },
   "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
   "lualine.nvim": { "branch": "master", "commit": "45e27ca739c7be6c49e5496d14fcf45a303c3a63" },
-  "nvim-lspconfig": { "branch": "master", "commit": "d177ad277a638f262edb73c75ffe33e377b95dc5" },
-  "nvim-tree.lua": { "branch": "master", "commit": "b856d0a0c3238e49d6385d830ea8c7785b1eccc8" },
-  "nvim-treesitter": { "branch": "master", "commit": "dfcfdb0e7bcb362c4de1ed7d0015c21957c91ba7" },
-  "nvim-web-devicons": { "branch": "master", "commit": "ecdeb4e2a4af34fc873bbfbf1f4c4e447e632255" },
-  "plenary.nvim": { "branch": "master", "commit": "a56bf0071bf63d35274fdc4738bb1e8821cfd2ea" },
-  "telescope.nvim": { "branch": "master", "commit": "18f10f28007cb8b4d50324217349c3f568684be2" }
+  "nvim-lspconfig": { "branch": "master", "commit": "f3195835c0447ee2c80152b893ab51ca162b04a9" },
+  "nvim-tree.lua": { "branch": "master", "commit": "a3aa3b47eac8b6289f028743bef4ce9eb0f6782e" },
+  "nvim-treesitter": { "branch": "master", "commit": "b4f6dd72980607a9821d24502b0ca7ee826376af" },
+  "nvim-web-devicons": { "branch": "master", "commit": "973ab742f143a796a779af4d786ec409116a0d87" },
+  "plenary.nvim": { "branch": "master", "commit": "9ce85b0f7dcfe5358c0be937ad23e456907d410b" },
+  "telescope.nvim": { "branch": "master", "commit": "b543aaa2c9cf8123ed2fe7dbb6c211a9cd415124" }
 }
