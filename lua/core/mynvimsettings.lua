@@ -21,6 +21,9 @@ vim.opt.shiftwidth = 4
 -- On pressing tab, insert 4 spaces
 vim.opt.expandtab = true
 
+-- no wrap
+vim.wo.wrap = false
+
 -- Vim commands
 vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
 vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')

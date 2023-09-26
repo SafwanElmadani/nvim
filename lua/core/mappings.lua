@@ -29,6 +29,8 @@ M.setup = function()
   vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', {silent = true})
   vim.keymap.set('n', '<S-Tab>', '<cmd>bprevious<CR>', {silent = true})
 
+-- toggle wrapoing text
+  vim.keymap.set('n', '<A-w>', '<cmd>set wrap!<CR>', {silent = true})
 
 end
 
