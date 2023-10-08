@@ -20,7 +20,7 @@ return {
             store_selection_keys = "<Tab>",
         })
         require("luasnip.loaders.from_vscode").lazy_load()
-        require("luasnip.loaders.from_snipmate").lazy_load()
+        -- require("luasnip.loaders.from_snipmate").lazy_load()
 
         vim.keymap.set({"i", "s"}, "<C-K>", function() 
            if ls.expand_or_jumpable() then

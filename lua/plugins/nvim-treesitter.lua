@@ -1,6 +1,8 @@
+-- this plugin has the highest impact on performace
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    -- enabled = false,
     config = function()
         require'nvim-treesitter.configs'.setup {
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
