@@ -54,6 +54,10 @@ return {
                   return kind
                 end,
             },
+            -- to highlight the first selection
+            completion = {
+                completeopt = 'menu,menuone,noinsert'
+            },
         })
     end,
 }
