@@ -25,7 +25,7 @@ vim.opt.expandtab = true
 vim.wo.wrap = false
 
 -- Vim commands
-vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
-vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
+-- vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
+-- vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
 vim.cmd('set cursorline!')
 vim.cmd('set cursorcolumn!')
