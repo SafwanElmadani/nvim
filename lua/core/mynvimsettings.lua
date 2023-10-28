@@ -24,6 +24,10 @@ vim.opt.expandtab = true
 -- no wrap
 vim.wo.wrap = false
 
+-- spell cheker
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
 -- Vim commands
 -- vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
 -- vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
