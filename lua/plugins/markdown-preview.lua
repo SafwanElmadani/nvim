@@ -18,6 +18,14 @@ return {
             " preview page title
             " ${name} will be replace with the file name
             let g:mkdp_page_title = '${name}'
+
+            " open preview in a new window
+            function OpenMarkdownPreview (url)
+              execute "silent ! firefox --new-window " . a:url
+              " execute "silent ! chromium --new-window --app=" . a:url
+            endfunction
+            let g:mkdp_browserfunc = 'OpenMarkdownPreview'
         ]]
+        vim.keymap.set("n", "<leader>md", function() vim.cmd("MarkdownPreview") end)
     end,
 }
