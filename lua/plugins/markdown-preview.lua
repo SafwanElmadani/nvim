@@ -21,8 +21,8 @@ return {
 
             " open preview in a new window
             function OpenMarkdownPreview (url)
-              execute "silent ! firefox --new-window " . a:url
-              " execute "silent ! chromium --new-window --app=" . a:url
+              execute "silent ! firefox-developer-edition --new-window " . a:url
+              " execute "silent ! brave-beta --new-window --app=" . a:url
             endfunction
             let g:mkdp_browserfunc = 'OpenMarkdownPreview'
         ]]
