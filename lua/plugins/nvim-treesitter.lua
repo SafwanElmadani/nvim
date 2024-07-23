@@ -39,6 +39,10 @@ return {
                 -- Instead of true it can also be a list of languages
                 additional_vim_regex_highlighting = false,
             },
+            -- needed along with vim.opt.smartindent = false to fix python indentation
+            indent = {
+                enable = true,
+            },
         }
 
     end,

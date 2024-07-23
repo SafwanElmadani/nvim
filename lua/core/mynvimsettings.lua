@@ -28,6 +28,9 @@ vim.wo.wrap = false
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 
+-- disable smartindent breaks python indenting
+vim.opt.smartindent = false
+
 -- Vim commands
 -- vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
 -- vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
