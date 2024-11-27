@@ -13,7 +13,7 @@ return {
             builtin.find_files({
                 hidden = true,
                 no_ignore = true,
-                layout_config = { prompt_position = "top" }
+                layout_config = { prompt_position = "bottom" }
             })
         end, {})
         -- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
