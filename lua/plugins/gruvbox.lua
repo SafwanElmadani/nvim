@@ -2,14 +2,21 @@ return {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
     config = function()
-        vim.keymap.set("n", "<leader>dt", function() 
-         vim.o.background = "dark" -- or "light" for light mode
-        -- vim.o.background = "light" -- or "light" for light mode
-         vim.cmd([[colorscheme gruvbox]])
-    end)
-         vim.o.background = "dark" -- or "light" for light mode
-        -- vim.o.background = "light" -- or "light" for light mode
-         vim.cmd([[colorscheme gruvbox]])
-    end,
+        -- Function to toggle between dark and light background
+        local function toggle_background()
+            if vim.o.background == "dark" then
+                vim.o.background = "light"
+            else
+                vim.o.background = "dark"
+            end
+            vim.cmd([[colorscheme gruvbox]])
+        end
 
+        -- Set default background to dark
+        vim.o.background = "dark"
+        vim.cmd([[colorscheme gruvbox]])
+
+        -- Map <leader>dt to toggle between light and dark modes
+        vim.keymap.set("n", "<leader>dt", toggle_background, { desc = "Toggle light/dark theme" })
+    end,
 }
