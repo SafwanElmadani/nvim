@@ -1,6 +1,7 @@
 -- this plugin has the highest impact on performace
 return {
     "nvim-treesitter/nvim-treesitter",
+    event = { "BufReadPost", "BufNewFile" },
     build = ":TSUpdate",
     -- enabled = false,
     config = function()
