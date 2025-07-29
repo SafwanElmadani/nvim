@@ -36,3 +36,9 @@ vim.opt.smartindent = false
 -- vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
 vim.cmd('set cursorline!')
 vim.cmd('set cursorcolumn!')
+
+if vim.fn.executable("rg") == 1 then
+  vim.o.grepprg = "rg --vimgrep --hidden --smart-case --glob '!.git'"
+  vim.o.grepformat = "%f:%l:%c:%m"
+end
+
