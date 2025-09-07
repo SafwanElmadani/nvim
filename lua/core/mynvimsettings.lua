@@ -34,8 +34,13 @@ vim.opt.smartindent = false
 -- Vim commands
 -- vim.cmd('hi CursorLine   cterm=NONE ctermbg=0 ctermfg=NONE')
 -- vim.cmd('hi CursorColumn   cterm=NONE ctermbg=0 ctermfg=NONE')
-vim.cmd('set cursorline!')
-vim.cmd('set cursorcolumn!')
+-- vim.cmd('set cursorline!')
+-- vim.cmd('set cursorcolumn!')
+
+-- Highlight current line
+vim.opt.cursorline = true
+-- Highlight current column
+vim.opt.cursorcolumn = true
 
 if vim.fn.executable("rg") == 1 then
   vim.o.grepprg = "rg --vimgrep --hidden --smart-case --glob '!.git'"
