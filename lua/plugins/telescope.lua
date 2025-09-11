@@ -20,6 +20,10 @@ return {
         vim.keymap.set("n", "<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+        -- Notes:
+        -- Ctrl-q put all results in the quickfix list
+        vim.keymap.set("n", "<leader>sr", require("telescope.builtin").resume, { noremap = true, silent = true, desc = "Resume last Telescope picker" })
+
 --- this is added for the live grep extension
         local telescope = require("telescope")
         local lga_actions = require("telescope-live-grep-args.actions")
