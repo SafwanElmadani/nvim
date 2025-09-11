@@ -13,8 +13,8 @@ return {
         end
 
         -- Set default background to dark
-        vim.o.background = "dark"
-        vim.cmd([[colorscheme gruvbox]])
+        -- vim.o.background = "dark"
+        -- vim.cmd([[colorscheme gruvbox]])
 
         -- Map <leader>dt to toggle between light and dark modes
         vim.keymap.set("n", "<leader>dt", toggle_background, { desc = "Toggle light/dark theme" })

@@ -28,5 +28,7 @@ return {
                 end
             end,
         })
-    end
+        --- set default theme
+        vim.cmd.colorscheme "catppuccin-mocha"
+    end,
 }
