@@ -32,7 +32,13 @@ M.setup = function()
 -- toggle wrapoing text
   vim.keymap.set('n', '<A-w>', '<cmd>set wrap!<CR>', {silent = true})
 
+-- Remap <Alt-k> to go to the previous quickfix item
+  vim.keymap.set('n', '<A-k>', ':cprev<CR>', { silent = true })
+
+-- Remap <Alt-j> to go to the next quickfix item
+  vim.keymap.set('n', '<A-j>', ':cnext<CR>', { silent = true })
+
+
 end
 
 return M
-
