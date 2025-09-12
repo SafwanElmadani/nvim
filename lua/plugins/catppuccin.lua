@@ -11,8 +11,11 @@ return {
 
         -- Highlight overrides
         local function set_highlights()
-            vim.api.nvim_set_hl(0, "CursorLine",   { bg = "#45475a" })
-            vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#45475a" })
+            -- vim.api.nvim_set_hl(0, "CursorLine",   { bg = "#45475a" })
+            -- vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#45475a" })
+            vim.api.nvim_set_hl(0, "CursorLine",   { bg = "#353746" })
+            vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#353746" })
+
         end
 
         -- Apply immediately if a catppuccin-* colorscheme is already loaded
