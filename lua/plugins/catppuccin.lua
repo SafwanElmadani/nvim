@@ -15,6 +15,9 @@ return {
             -- vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#45475a" })
             vim.api.nvim_set_hl(0, "CursorLine",   { bg = "#353746" })
             vim.api.nvim_set_hl(0, "CursorColumn", { bg = "#353746" })
+            -- make / search highlights yellow
+            vim.api.nvim_set_hl(0, "Search",       { bg = "#FFFF00", fg = "#000000" })
+            vim.api.nvim_set_hl(0, "IncSearch",    { bg = "#FFD700", fg = "#000000" })
 
         end
 

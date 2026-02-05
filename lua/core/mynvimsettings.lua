@@ -68,3 +68,5 @@ end
 
 -- Create a simple keymap to call it
 vim.keymap.set("n", "<leader>tr", ":lua toggle_transparency()<CR>", { desc = "Toggle transparency" })
+-- highlight multiword
+vim.opt.hlsearch = true
