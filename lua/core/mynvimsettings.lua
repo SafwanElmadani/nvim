@@ -1,5 +1,5 @@
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- change cursor shape to block in insert mode
 vim.opt.guicursor = ""
@@ -47,26 +47,20 @@ if vim.fn.executable("rg") == 1 then
   vim.o.grepformat = "%f:%l:%c:%m"
 end
 
-local is_transparent = false
-local gruvbox_bg = "#282828"
-
-function _G.toggle_transparency()
-  if is_transparent then
-    -- Set to Gruvbox opaque background
-    vim.cmd("highlight Normal guibg=" .. gruvbox_bg)
-    vim.cmd("highlight NormalFloat guibg=" .. gruvbox_bg)
-    is_transparent = false
-    print("Transparency OFF")
-  else
-    -- Set to transparent
-    vim.cmd("highlight Normal guibg=NONE")
-    vim.cmd("highlight NormalFloat guibg=NONE")
-    is_transparent = true
-    print("Transparency ON")
-  end
-end
-
 -- Create a simple keymap to call it
 vim.keymap.set("n", "<leader>tr", ":lua toggle_transparency()<CR>", { desc = "Toggle transparency" })
 -- highlight multiword
 vim.opt.hlsearch = true
+
+-- show whitespace
+vim.keymap.set("n", "<leader>l", ":set list!<CR>")
+
+-- custom patterns
+vim.cmd('packadd! matchit')
+
+vim.api.nvim_create_autocmd('BufEnter', {
+  pattern = '*',
+  callback = function()
+    vim.b.match_words = [[/\*\[{\*/:/\*}\]\*/]]
+  end,
+})

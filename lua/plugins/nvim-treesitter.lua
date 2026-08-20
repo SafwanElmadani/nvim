@@ -1,49 +1,41 @@
--- this plugin has the highest impact on performace
+-- this plugin has the highest impact on performance
+-- migrated to the `main` branch (old `master` branch is archived, no Neovim 0.12 support)
 return {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
+    lazy = false,
     build = ":TSUpdate",
-    -- enabled = false,
     config = function()
-        require'nvim-treesitter.configs'.setup {
-            -- A list of parser names, or "all" (the five listed parsers should always be installed)
-            ensure_installed = { "c", "cpp", "lua", "python", "vim", "vimdoc", "query", "bash", "html", "javascript", "markdown", "typescript", "yaml", "go"},
+        require("nvim-treesitter").install({
+            "c", "cpp", "lua", "python", "vim", "vimdoc", "query", "bash",
+            "html", "javascript", "markdown", "markdown_inline", "typescript",
+            "yaml", "go",
+        })
 
-            -- Install parsers synchronously (only applied to `ensure_installed`)
-            sync_install = false,
+        local max_filesize = 1024 * 1024 -- 1 MB
 
-            -- Automatically install missing parsers when entering buffer
-            -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-            auto_install = true,
+        vim.api.nvim_create_autocmd("FileType", {
+            callback = function(args)
+                local buf = args.buf
+                local lang = vim.treesitter.language.get_lang(vim.bo[buf].filetype)
+                if not lang then
+                    return
+                end
+                local ok, loaded = pcall(vim.treesitter.language.add, lang)
+                if not (ok and loaded) then
+                    return
+                end
 
+                -- skip very large files for performance
+                local ok, stats = pcall(vim.uv.fs_stat, vim.api.nvim_buf_get_name(buf))
+                if ok and stats and stats.size > max_filesize then
+                    return
+                end
 
-            highlight = {
-                enable = true,
-
-                -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-                -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-                -- the name of the parser)
-                -- list of language that will be disabled
-                -- disable = { "c", "rust" },
-                -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
-                disable = function(lang, buf)
-                    local max_filesize = 500 * 1024 -- 500 KB
-                    local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-                    if ok and stats and stats.size > max_filesize then
-                        return true
-                    end
-                end,
-
-                -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-                -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-                -- Using this option may slow down your editor, and you may see some duplicate highlights.
-                -- Instead of true it can also be a list of languages
-                additional_vim_regex_highlighting = false,
-            },
-            -- needed along with vim.opt.smartindent = false to fix python indentation
-            indent = {
-                enable = true,
-            },
-        }
-
+                vim.treesitter.start(buf, lang)
+                -- needed along with vim.opt.smartindent = false to fix python indentation
+                vim.bo[buf].indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+            end,
+        })
     end,
 }

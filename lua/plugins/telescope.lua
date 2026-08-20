@@ -51,5 +51,55 @@ return {
         -- don't forget to load the extension
         telescope.load_extension("live_grep_args")
 ---
+
+        -- Telescope highlights, sourced from the live base16 palette so they
+        -- track whatever matugen regenerates into dankcolors.lua.
+        local function apply_telescope_hl()
+            local ok, base16 = pcall(require, 'base16-colorscheme')
+            if not ok or not base16.colors then return end
+            local c = base16.colors
+            local set = function(name, val) vim.api.nvim_set_hl(0, name, val) end
+
+            set('TelescopeNormal',         { fg = c.base05, bg = c.base00 })
+            set('TelescopePromptNormal',   { link = 'TelescopeNormal' })
+            set('TelescopeResultsNormal',  { link = 'TelescopeNormal' })
+            set('TelescopePreviewNormal',  { link = 'TelescopeNormal' })
+
+            set('TelescopeBorder',         { fg = c.base03, bg = c.base00 })
+            set('TelescopePromptBorder',   { link = 'TelescopeBorder' })
+            set('TelescopeResultsBorder',  { link = 'TelescopeBorder' })
+            set('TelescopePreviewBorder',  { link = 'TelescopeBorder' })
+
+            set('TelescopeTitle',          { fg = c.base0A, bg = c.base00, bold = true })
+            set('TelescopePromptTitle',    { link = 'TelescopeTitle' })
+            set('TelescopeResultsTitle',   { link = 'TelescopeTitle' })
+            set('TelescopePreviewTitle',   { link = 'TelescopeTitle' })
+
+            set('TelescopeSelection',        { fg = c.base05, bg = c.base02, bold = true })
+            set('TelescopeSelectionCaret',   { fg = c.base0A, bg = c.base02 })
+            set('TelescopeMultiSelection',   { fg = c.base0E })
+
+            set('TelescopeMatching',       { fg = c.base0A, bold = true })
+            set('TelescopePromptPrefix',   { fg = c.base0A, bg = c.base00 })
+            set('TelescopePromptCounter',  { fg = c.base03, bg = c.base00 })
+        end
+
+        apply_telescope_hl()
+
+        vim.api.nvim_create_autocmd('ColorScheme', {
+            group = vim.api.nvim_create_augroup('TelescopeBase16Hl', { clear = true }),
+            callback = apply_telescope_hl,
+        })
+
+        -- Re-apply after Noctalia/matugen rewrites lua/matugen.lua. Its own
+        -- SIGUSR1 handler reloads the base16 palette but doesn't fire ColorScheme.
+        local matugen_path = vim.fn.stdpath('config') .. '/lua/matugen.lua'
+        if not _G._telescope_hl_watcher then
+            local uv = vim.uv or vim.loop
+            _G._telescope_hl_watcher = uv.new_fs_event()
+            _G._telescope_hl_watcher:start(matugen_path, {}, vim.schedule_wrap(function()
+                vim.defer_fn(apply_telescope_hl, 50)
+            end))
+        end
     end,
 }
